@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RoomNoteActivity">
+
+    <ImageView
+        android:id="@+id/closebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"/>
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/closebutton"
+        android:text="Name"
+        android:gravity="center"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"/>
+
+
+
+    <TextView
+        android:id="@+id/age_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/age_titel"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/age_title"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="70dp"
+        android:text="@string/age"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/work_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/age_title"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:text="Work"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/work_title"
+        app:layout_constraintTop_toBottomOf="@id/age_title"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="70dp"
+        android:text="Work"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:id="@+id/experience_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/work_title"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:text="Experience"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/work_title"
+        app:layout_constraintTop_toBottomOf="@id/work_title"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="70dp"
+        android:text="experience"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"/>
+
+
+    <Button
+        android:id="@+id/add_note_button"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/experience_title"
+        android:layout_marginTop="40dp"
+        android:text="Add Notes"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_note_button"
+        android:layout_marginTop="20dp"
+        tools:listitem="@layout/note_row"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyExperience</string>
+    <string name="age_titel">Age</string>
+    <string name="age">age</string>
+</resources>
